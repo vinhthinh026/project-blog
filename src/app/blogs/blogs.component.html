@@ -15,9 +15,9 @@
     <div>
         <ul class="list-unstyled">
             <li class="media" *ngFor="let blog of blogList">
-                <img (click) = "detailBlog(blog.id)" src="{{blog?.image}}" class="w-25 mr-3" alt="...">
-                <div class="media-body">
-                    <h5 class="mt-0 mb-1">{{blog?.title}}</h5>
+                <img (click) = "detailBlog(blog.id)" src="{{blog?.image}}" class="w-25 mr-3 cursor-pointer" alt="...">
+                <div (click) = "detailBlog(blog.id)" class="media-body cursor-pointer">
+                    <h5 class="mt-0 mb-1 ">{{blog?.title}}</h5>
                     {{blog?.content}}
                     <div>
                         {{blog?.createdAt  | date : 'yyyy/MM/dd HH:mm'}}

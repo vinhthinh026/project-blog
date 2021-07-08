@@ -1,6 +1,5 @@
 import { HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
 import { throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 
@@ -8,7 +7,6 @@ import { catchError } from "rxjs/operators";
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 	constructor(
-        private router: Router,
 	) { }
 
 	intercept(request: HttpRequest<any>, next: HttpHandler): any {
