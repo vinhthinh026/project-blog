@@ -1,0 +1,8 @@
+<div class="card mb-3">
+    <img class="card-img-top" src="{{dataBlog?.image}}" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{dataBlog?.title}}</h5>
+        <p class="card-text">{{dataBlog?.content}}</p>
+        <p class="card-text"><small class="text-muted">{{dataBlog?.createdAt  | date : 'yyyy/MM/dd HH:mm'}}</small></p>
+    </div>
+</div>

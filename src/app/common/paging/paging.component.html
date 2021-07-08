@@ -1,0 +1,13 @@
+<nav aria-label="...">
+    <ul class="pagination">
+        <li class="page-item {{(currentPage <= 1) ? 'disabled' : ''}}">
+            <p (click)="previousPage()" class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</p>
+        </li>
+        <li *ngFor="let page of arrPage" class="page-item {{ currentPage == page ? 'active' : ''  }}">
+            <p (click)="selectPage(page)" class="page-link" href="#">{{page}}</p>
+        </li>
+        <li class="page-item  {{(currentPage >= totalPage) ? 'disabled' : ''}}">
+            <p (click)="nextPage()" class="page-link" href="#">Next</p>
+        </li>
+    </ul>
+</nav>
